@@ -17,10 +17,10 @@ const cacheName = 'cache-v1';
 const precacheResources = [
   '/',
   'index.html',
-  'css/bootstrap.min.css',
-  'font-awesome/css/font-awesome.css',
-  'css/animate.css',
-  'css/style.css'
+  'assets/css/bootstrap.min.css',
+  'assets/font-awesome/css/font-awesome.css',
+  'assets/css/animate.css',
+  'assets/css/style.css'
 ];
 
 self.addEventListener('install', event => {
