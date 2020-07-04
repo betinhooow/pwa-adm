@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { registerServiceWorker } from './service-worker';
+// import { registerServiceWorker } from './service-worker';
 import SideMenu from './layout/SideMenu';
 
 ReactDOM.render(
@@ -15,4 +15,4 @@ ReactDOM.render(
 document.getElementById('nav-bar')
 );
 
-registerServiceWorker();
+// registerServiceWorker();
