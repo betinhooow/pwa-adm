@@ -5,7 +5,8 @@ import { registerServiceWorker } from './service-worker';
 import SideMenu from './layout/SideMenu';
 
 ReactDOM.render(
-    <App />,
+  <div className="body">
+    <App /></div>,
   document.getElementById('root')
 );
 
