@@ -1,5 +1,5 @@
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
-import { EntityRepository, Repository, getRepository } from 'typeorm';
+import { Repository, getRepository, EntityRepository } from 'typeorm';
 import ICreateUserDTO from '@modules/users/dtos/ICreateUserDTO';
 import User from '../entities/User';
 
@@ -9,9 +9,6 @@ class UsersRepository implements IUsersRepository {
 
   constructor() {
     this.ormRepository = getRepository(User);
-  }
-  findAllProviders(data: any): Promise<User[]> {
-    throw new Error("Method not implemented.");
   }
 
   public async findById(id: string): Promise<User | undefined> {

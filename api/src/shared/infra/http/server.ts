@@ -5,11 +5,12 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import 'express-async-errors';
 import AppError from '@shared/error/AppError';
-import '@shared/infra/typeorm';
-import '@shared/container';
 import { errors } from 'celebrate';
 import routes from './routes';
 // import rateLimiter from './middlewares/rateLimiter';
+
+import '@shared/infra/typeorm';
+import '@shared/container';
 
 const app = express();
 
