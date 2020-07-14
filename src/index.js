@@ -6,13 +6,14 @@ import SideMenu from './layout/SideMenu';
 
 ReactDOM.render(
   <div className="body">
-    <App /></div>,
+    <App />
+  </div>,
   document.getElementById('root')
 );
 
 ReactDOM.render(
   <SideMenu />,
-document.getElementById('nav-bar')
+  document.getElementById('nav-bar')
 );
 
 // registerServiceWorker();
