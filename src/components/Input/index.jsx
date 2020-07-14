@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { useField } from '@unform/core';
+import { useField } from "@unform/core";
 
 const Input = ({ name, placeholder, ...rest }) => {
   const inputRef = useRef(null);
@@ -9,18 +9,23 @@ const Input = ({ name, placeholder, ...rest }) => {
     registerField({
       name: fieldName,
       ref: inputRef.current,
-      path: 'value',
+      path: "value",
     });
   }, [fieldName, registerField]);
 
-  return <input 
-    name={name}  
-    placeholder={placeholder}
-    className="form-control" 
-    defaultValue={defaultValue}
-    ref={inputRef}
-    {...rest} 
-  />;
+  return (
+    <div>
+      <input
+        name={name}
+        placeholder={placeholder}
+        className="form-control"
+        defaultValue={defaultValue}
+        ref={inputRef}
+        {...rest}
+      />
+      {error}
+    </div>
+  );
 };
 
 export default Input;
