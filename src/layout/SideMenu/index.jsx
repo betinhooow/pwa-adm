@@ -2,7 +2,7 @@ import React from "react";
 
 const SideMenu = () => (
   <nav className="navbar-default navbar-static-side" role="navigation">
-    <div className="sidebar-collapse">
+    <div className="sidebar-collapse" style={{backgroundColor: '#2f4050'}}>
       <ul className="nav metismenu" id="side-menu">
         <li className="nav-header">
           <div className="dropdown profile-element">

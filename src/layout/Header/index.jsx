@@ -8,12 +8,12 @@ const Header = () => (
       style={{ marginBottom: 0 }}
     >
       <div className="navbar-header">
-        <a
+        <button
           className="navbar-minimalize minimalize-styl-2 btn btn-primary"
-          href="#/"
+          
         >
           <i className="fa fa-bars"></i>
-        </a>
+        </button>
       </div>
       <ul className="nav navbar-top-links navbar-right">
         <li>
