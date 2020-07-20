@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SideMenu = () => (
   <nav className="navbar-default navbar-static-side" role="navigation">
-    <div className="sidebar-collapse" style={{backgroundColor: '#2f4050'}}>
+    <div className="sidebar-collapse" style={{ backgroundColor: "#2f4050" }}>
       <ul className="nav metismenu" id="side-menu">
         <li className="nav-header">
           <div className="dropdown profile-element">
@@ -39,6 +40,12 @@ const SideMenu = () => (
           <a href="#/">
             <i className="fa fa-laptop"></i>
             <span className="nav-label">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="table">
+            <i className="fa fa-laptop"></i>
+            <span className="nav-label">Table</span>
           </a>
         </li>
         <li>
