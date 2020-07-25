@@ -37,7 +37,7 @@ const SideMenu = () => (
           <div className="logo-element">EC</div>
         </li>
         <li>
-          <a href="#/">
+          <a href="home">
             <i className="fa fa-laptop"></i>
             <span className="nav-label">Home</span>
           </a>
