@@ -49,6 +49,12 @@ const SideMenu = () => (
           </a>
         </li>
         <li>
+          <a href="modal">
+            <i className="fa fa-laptop"></i>
+            <span className="nav-label">Modal</span>
+          </a>
+        </li>
+        <li>
           <a href="#/">
             <i className="fa fa-table"></i>
             <span className="nav-label">Blog</span>
