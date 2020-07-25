@@ -1,7 +1,6 @@
 import React from "react";
 
 const Modal = ({ open, onClose }) => {
-  
   return (
     open && (
       <div
