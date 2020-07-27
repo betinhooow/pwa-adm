@@ -3,7 +3,7 @@ import { Content } from "./styles";
 
 const Modal = ({ open, onClose, children, title }) => {
   return (
-    open && (
+    open && ( 
       <div
         className="modal inmodal fade in"
         role="dialog"
