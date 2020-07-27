@@ -3,21 +3,20 @@ import Header from "../../layout/Header";
 import Footer from "../../layout/Footer";
 import Modal from "../../components/Modal";
 import { useState } from "react";
+import Button from "../../components/Button/Button";
 
 const ModalPage = () => {
   const [open, setOpen] = useState(false);
   return (
     <div>
       <Header />
-
-      <button
-        type="button"
+      <Button
+        onClick={() => setOpen(true)}
         className="btn btn-primary"
         data-toggle="modal"
-        onClick={() => setOpen(true)}
       >
         Large Modal
-      </button>
+      </Button>
 
       <Modal open={open} onClose={() => setOpen(false)} title="Modal title">
         <div className="modal-body">
@@ -40,9 +39,13 @@ const ModalPage = () => {
         </div>
 
         <div className="modal-footer">
-          <button type="button" className="btn btn-primary">
-            Save changes
-          </button>
+        <Button
+          onClick={() => setOpen(false)}
+          className="btn btn-primary"
+          data-toggle="modal"
+        >
+          Save changes
+        </Button>
         </div>
       </Modal>
       <Footer />

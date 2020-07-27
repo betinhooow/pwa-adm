@@ -1,10 +1,11 @@
 import React, { useRef, useEffect, useCallback } from "react";
 import { Form } from "@unform/web";
 import Input from "../../components/Input";
-import * as Yup from 'yup';
+import * as Yup from "yup";
 import { useAuth } from "../../hooks/auth";
 import { useHistory } from "react-router-dom";
-import getValidationErrors from '../../utils/getvalidationErrors';
+import getValidationErrors from "../../utils/getvalidationErrors";
+import Button from "../../components/Button/Button";
 
 const SignIn = () => {
   const formRef = useRef(null);
@@ -21,31 +22,31 @@ const SignIn = () => {
   const handleSubmit = useCallback(
     async (data) => {
       try {
-        formRef['current'].setErrors({});
+        formRef["current"].setErrors({});
         const schema = Yup.object().shape({
           email: Yup.string()
-            .required('E-mail obrigatório')
-            .email('Digite um e-mail válido'),
-          password: Yup.string().required('Senha obrigatorio'),
+            .required("E-mail obrigatório")
+            .email("Digite um e-mail válido"),
+          password: Yup.string().required("Senha obrigatorio"),
         });
 
         await schema.validate(data, {
           abortEarly: false,
         });
 
-        await auth['signIn']({ email: data.email, password: data.password });
-        history.push('/home');
+        await auth["signIn"]({ email: data.email, password: data.password });
+        history.push("/home");
       } catch (err) {
-        if(err['name'] === "ValidationError"){
+        if (err["name"] === "ValidationError") {
           const errors = getValidationErrors(err);
-          console.log(formRef, errors)
-          formRef['current'].setErrors(errors);
-  
+          console.log(formRef, errors);
+          formRef["current"].setErrors(errors);
+
           return;
         }
       }
     },
-    [auth, history],
+    [auth, history]
   );
 
   return (
@@ -72,12 +73,13 @@ const SignIn = () => {
               />
             </div>
 
-            <button
+            <Button
               type="submit"
+              onClick={() => console.log("clicked")}
               className="btn btn-primary block full-width m-b"
             >
               Entrar
-            </button>
+            </Button>
           </Form>
         </div>
       </div>
