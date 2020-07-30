@@ -4,9 +4,9 @@
     "type": "mysql",
     "host": "localhost",
     "port": 3306,
-    "username": "adm-pwa",
-    "password": "-Dx.M9*asfi/!rB",
-    "database": "adm-pwa",
+    "username": "usernam",
+    "password": "password",
+    "database": "usernam",
     "entities": ["./src/modules/**/infra/typeorm/entities/*.ts"],
     "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
     "cli": {
